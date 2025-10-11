@@ -1,57 +1,58 @@
-# Udacity Data Engineering Project
+# Projeto de Engenharia de Dados da Udacity
 
-This project makes use of pyspark to extract data and organize then into a snowflack schema database composed of fact and dimention tables.
-It extracts data from parquet files and csv files.
-
-
-
-# US Immigration Data
-
-### Data Engineering Capstone Project
-
-#### Project Summary
-This project aims to use techniques learned in the Udacity Nanodegree course on Data Engineer to create a fact and dimension tables regarding US immigration data, together with analysis on temperature and airport characteristics. Here we will use two formats of data (SAS and .csv) to build FACT and dimension tables, splitting the US immigration dataset in regards to what are its informations about (flight? passenger?), and add informtion on temperature on the dates observed.
-
-# Dataset 1: I94 Immigration Data from the US National Tourism and Trade Office 
-
-- Is the data that will be used to build our FACT table. It contains information on airline, visatipe, destination of people immigrating to the US.
-- Firstly we will check for missing data, check if the data is behaving as expected and transform the data where necessary.
-- This dataset has around 3 million lines and 28 columns. We will limit the columns to those we are interested in and explore how to break it into new tables when relevant
-- This data is updated monthly
-- For this project I opted for deleting columns with more than 30% of its values being null. However, it is expected that cases with null values happen in data engineering projects, and this is one of many possible approaches.
-- In this dataset we have a lot of infomations, we can split it in regards to what the informations are about.
-- We make use of draw.io to build visualization for the schema
-- I will allow nan values to continue as nan, without replacement techniques
+Este projeto utiliza o pyspark para extrair dados e organizá-los em um banco de dados com esquema snowflack composto por tabelas de fatos e dimensões.
+Ele extrai dados de arquivos parquet e csv.
 
 
 
-# Dataset 2: Temperature
-- Temperature by city and date
+# Dados de Imigração dos EUA
+
+### Projeto Final de Engenharia de Dados
+
+#### Resumo do Projeto
+Este projeto tem como objetivo usar as técnicas aprendidas no curso Nanodegree da Udacity sobre Engenharia de Dados para criar tabelas de fatos e dimensões relacionadas aos dados de imigração dos EUA, juntamente com análises sobre temperatura e características dos aeroportos. Aqui, usaremos dois formatos de dados (SAS e .csv) para construir tabelas de FATOS e dimensões, dividindo o conjunto de dados de imigração dos EUA em relação ao que são suas informações (voo? passageiro?) e adicionar informações sobre a temperatura nas datas observadas.
+
+# Conjunto de dados 1: Dados de imigração I94 do Escritório Nacional de Turismo e Comércio dos EUA
+
+- São os dados que serão usados para construir nossa tabela de FATOS. Eles contêm informações sobre companhia aérea, tipo de visto e destino das pessoas que imigram para os EUA.
+
+- Primeiramente, verificaremos se há dados faltando, se os dados estão se comportando conforme o esperado e transformaremos os dados quando necessário.
+- Este conjunto de dados tem cerca de 3 milhões de linhas e 28 colunas. Limitaremos as colunas àquelas que nos interessam e exploraremos como dividi-las em novas tabelas quando relevante.
+- Esses dados são atualizados mensalmente.
+- Para este projeto, optei por excluir colunas com mais de 30% de seus valores nulos. No entanto, é esperado que casos com valores nulos ocorram em projetos de engenharia de dados, e esta é uma das muitas abordagens possíveis.
+- Neste conjunto de dados, temos muitas informações, podemos dividi-lo de acordo com o tipo de informação.
+- Utilizamos o draw.io para criar uma visualização do esquema
+- Permitirei que os valores nan continuem como nan, sem técnicas de substituição
 
 
-# Dataset 2: Airport 
-- Code
-- Location
-- State
+
+# Conjunto de dados 2: Temperatura
+- Temperatura por cidade e data
 
 
-# Technologies and Tools 
+# Conjunto de dados 2: Aeroporto 
+- Código
+- Localização
+- Estado
 
-Here I opted for using pyspark and take a vantage of parallem processing.
 
-# Steps:
+# Tecnologias e ferramentas 
 
-- Create an enviroment for the project
-- Install the following packages: Pandas, Re, Pyspark, Numpy.
-- Run Capstone Project Template.ipynb (example: by using Vscode and checking that the kernel refers to the diserd environment)
+Aqui, optei por usar o pyspark e aproveitar o processamento paralelo.
 
-# Goal:
+# Passos:
 
-Create this data model from the initial datasets described avobe:
+- Crie um ambiente para o projeto.
+- Instale os seguintes pacotes: Pandas, Re, Pyspark, Numpy.
+- Execute o Capstone Project Template.ipynb (exemplo: usando o Vscode e verificando se o kernel se refere ao ambiente diserd).
+
+# Objetivo:
+
+Crie este modelo de dados a partir dos conjuntos de dados iniciais descritos acima:
 
 ![alt_text](new_datamodel.PNG)
 
-## Example of Analysis with Data Model:
-- Check temperature on arrival date of a passanger 
-- Check temperature on port on the date level
-- Correlate passanger and find out if there are indiations of preference regarding temperature for choosing fligh date
+## Exemplo de análise com modelo de dados:
+- Verifique a temperatura na data de chegada de um passageiro
+- Verifique a temperatura no porto na data
+- Correlacione os passageiros e descubra se há indícios de preferência em relação à temperatura para a escolha da data do voo
