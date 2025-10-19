@@ -1,7 +1,7 @@
 # Projeto de Engenharia de Dados da Udacity
 
 Este projeto utiliza o pyspark para extrair dados e organizá-los em um banco de dados com esquema snowflack composto por tabelas de fatos e dimensões.
-Ele extrai dados de arquivos parquet e csv
+Ele extrai dados de arquivos parquet e csv.
 
 
 
@@ -56,5 +56,6 @@ Crie este modelo de dados a partir dos conjuntos de dados iniciais descritos aci
 - Verifique a temperatura na data de chegada de um passageiro
 - Verifique a temperatura no porto na data
 - Correlacione os passageiros e descubra se há indícios de preferência em relação à temperatura para a escolha da data do voo
+
 
 
