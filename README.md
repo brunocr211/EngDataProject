@@ -55,7 +55,8 @@ Crie este modelo de dados a partir dos conjuntos de dados iniciais descritos aci
 ## Exemplo de análise com modelo de dados:
 - Verifique a temperatura na data de chegada de um passageiro
 - Verifique a temperatura no porto na data
-- Correlacione os passageiros e descubra se há indícios de preferência em relação à temperatura para a escolha da data do voo
+- Correlacione os passageiros e descubra se há indícios de preferência em relação à temperatura para a escolha da data do voo.
+
 
 
 
